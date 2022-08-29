@@ -21,7 +21,7 @@ function App() {
       <button onClick={ () => {
         let copy = [...글제목];
         copy.sort();
-        글제목변경(copy);
+        글제목변경(copy); // copy의 내용으로 대체(대입)한다.
       }}>가나다순정렬</button>
 
       <button onClick={ () => { // state가 array/object면 독립적 카피본을 만들어서 수정해야 함
@@ -39,12 +39,13 @@ function App() {
         <p>2월 17일 발행</p>
       </div>
       <div className='list'>
-        <h4 onClick={ () => { setModal(true) }}>{ 글제목[2] }</h4>
+        <h4 onClick={ () => { setModal(!modal) }}>{ 글제목[2] }</h4>
         <p>2월 17일 발행</p>
       </div>
       
-      {
-        modal == true ? <Modal/> : null
+      { // modal 누르면 현재 modal의 상태를 반전시켜주기 위해 !(부정) 문법 사용
+        modal == true ? <Modal></Modal> : null
+        // modal == false ? <Modal></Modal> : null // ! 안쓸거면 이렇게도 가능
       }
       
     </div>
