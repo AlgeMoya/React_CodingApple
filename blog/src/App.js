@@ -11,7 +11,7 @@ function App() {
   let post = '강남 우동 맛집';
   let [logo, setLogo] = useState('ReactBlog'); 
   let [글제목, 글제목변경] = useState(['남자 코트 추천', '강남 우동맛집', '파이썬독학']);
-  let [발행일, 발행일변경] = useState([dateString, dateString, dateString])
+  let [발행일, 발행일변경] = useState([dateString, dateString, dateString]);
   let [따봉, 따봉변경] = useState([0, 0, 0]);
   let [modal, setModal] = useState(false);
   let [title, setTitle] = useState(0);
